@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Utility.Pooling
+namespace SST.Pooling
 {
     public class MultiPool<TKey, TValue>
     {
