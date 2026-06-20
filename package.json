@@ -1,0 +1,22 @@
+{
+  "name": "com.egorshesterikov.pooling",
+  "version": "1.0.0",
+  "displayName": "Pooling",
+  "description": "Lightweight generic object pool for Unity and pure C# projects. Provides Pool<T> for a single type and MultiPool<TKey, TValue> for managing multiple pools under a common key. No Unity dependencies.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Egor Shesterikov",
+    "email": "egor.schesterikov@mail.ru",
+    "url": "https://github.com/EgorShesterikov"
+  },
+  "keywords": [
+    "pooling",
+    "object-pool",
+    "performance",
+    "allocation-free"
+  ],
+  "documentationUrl": "https://github.com/EgorShesterikov/Unity-Pooling/blob/main/README.md",
+  "changelogUrl": "https://github.com/EgorShesterikov/Unity-Pooling/releases",
+  "licensesUrl": "https://github.com/EgorShesterikov/Unity-Pooling/blob/main/LICENSE.md",
+  "dependencies": {}
+}
