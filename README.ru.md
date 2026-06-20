@@ -10,31 +10,13 @@
 
 ## Установка
 
-**Через Package Manager (Git URL)**
+1. **.unitypackage** — [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases)
+2. **UPM** — `Window → Package Manager` → `+` → `Add package from git URL`:
+   `https://github.com/EgorShesterikov/Unity-Pooling.git`
+   Добавь `#тег` в конец URL для фиксации версии.
+3. **Вручную** — склонируй или скачай, скопируй в `Assets/`.
 
-Открой `Window → Package Manager`, нажми `+` → `Add package from git URL` и введи:
-
-```
-https://github.com/EgorShesterikov/Unity-Pooling.git
-```
-
-Чтобы зафиксировать конкретную версию, добавь `#<тег>`, например `...Unity-Pooling.git#1.0.0`.
-
-**Через `Packages/manifest.json`**
-
-Добавь запись в блок `dependencies`:
-
-```json
-"com.egorshesterikov.pooling": "https://github.com/EgorShesterikov/Unity-Pooling.git"
-```
-
-**Через `.unitypackage`**
-
-Скачай последний релиз со страницы [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases) и импортируй через `Assets → Import Package → Custom Package...`.
-
-**Ручное копирование**
-
-Склонируй или скачай репозиторий и скопируй папку куда угодно внутрь `Assets/` своего проекта.
+Unity 2021.3+
 
 ## Классы
 

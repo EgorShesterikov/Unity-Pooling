@@ -10,31 +10,13 @@ A lightweight generic object pool for Unity and pure C# projects. Provides `Pool
 
 ## Installation
 
-**Via Package Manager (Git URL)**
+1. **.unitypackage** — [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases)
+2. **UPM** — `Window → Package Manager` → `+` → `Add package from git URL`:
+   `https://github.com/EgorShesterikov/Unity-Pooling.git`
+   Append `#tag` to pin a version.
+3. **Manual** — clone or download, copy to `Assets/`.
 
-Open `Window → Package Manager`, click `+` → `Add package from git URL` and enter:
-
-```
-https://github.com/EgorShesterikov/Unity-Pooling.git
-```
-
-To pin a specific version append `#<tag>`, e.g. `...Unity-Pooling.git#1.0.0`.
-
-**Via `Packages/manifest.json`**
-
-Add the entry to the `dependencies` block:
-
-```json
-"com.egorshesterikov.pooling": "https://github.com/EgorShesterikov/Unity-Pooling.git"
-```
-
-**Via `.unitypackage`**
-
-Grab the latest release from the [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases) page and import it via `Assets → Import Package → Custom Package...`.
-
-**Manual copy**
-
-Clone or download the repository and copy the folder anywhere under your project's `Assets/`.
+Unity 2021.3+
 
 ## Classes
 
