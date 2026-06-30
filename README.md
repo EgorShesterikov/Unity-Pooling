@@ -1,4 +1,9 @@
-# Pooling
+<img src="Documentation~/banner.png" width="900" alt="Pooling">
+
+[![release](https://img.shields.io/github/v/release/EgorShesterikov/Unity-Pooling)](../../releases)
+[![release date](https://img.shields.io/github/release-date/EgorShesterikov/Unity-Pooling)](../../releases)
+[![last commit](https://img.shields.io/github/last-commit/EgorShesterikov/Unity-Pooling)](../../commits)
+[![license](https://img.shields.io/github/license/EgorShesterikov/Unity-Pooling)](LICENSE.md)
 
 **English** | [Русский](README.ru.md)
 
@@ -8,9 +13,25 @@ Reuse objects without allocations. No Unity dependencies — works in any C# con
 
 A lightweight generic object pool for Unity and pure C# projects. Provides `Pool<T>` for a single type and `MultiPool<TKey, TValue>` for managing multiple pools under a common key.
 
+## Table Of Contents
+
+<details>
+<summary>Details</summary>
+
+- [Installation](#installation)
+- [Classes](#classes)
+- [Usage](#usage)
+  - [Pool\<T\>](#poolt)
+  - [MultiPool\<TKey, TValue\>](#multipooltkey-tvalue)
+- [Notes](#notes)
+
+</details>
+
+---
+
 ## Installation
 
-1. **.unitypackage** — [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases)
+1. **.unitypackage** — [Releases](../../releases)
 2. **UPM** — `Window → Package Manager` → `+` → `Add package from git URL`:
    `https://github.com/EgorShesterikov/Unity-Pooling.git`
    Append `#tag` to pin a version.
@@ -18,11 +39,15 @@ A lightweight generic object pool for Unity and pure C# projects. Provides `Pool
 
 Unity 2021.3+
 
+---
+
 ## Classes
 
 **`Pool<T>`** — a single typed pool.
 
 **`MultiPool<TKey, TValue>`** — a dictionary of pools keyed by any type (typically `System.Type`). Lets you manage many pools through a single entry point.
+
+---
 
 ## Usage
 
@@ -64,14 +89,18 @@ var handler = multiPool.Get(typeof(MyHandler));
 multiPool.Release(typeof(MyHandler), handler);
 ```
 
+---
+
 ## Notes
 
 - `Pool<T>` tracks both free and occupied instances — double-releasing an instance is silently ignored.
 - `MultiPool` throws `KeyNotFoundException` if you call `Get` before registering a factory for that key.
 - No Unity dependencies — `noEngineReferences` is enabled, so the assembly works in any C# context.
 
+---
+
 ## License
 
-Released under the [MIT License](LICENSE.md).
+Distributed under the [MIT License](LICENSE.md). Free for personal and commercial use.
 
-Authored by **Egor Shesterikov**.
+Author — **Egor Shesterikov**.

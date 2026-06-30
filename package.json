@@ -1,6 +1,6 @@
 {
   "name": "com.egorshesterikov.pooling",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Pooling",
   "description": "Lightweight generic object pool for Unity and pure C# projects. Provides Pool<T> for a single type and MultiPool<TKey, TValue> for managing multiple pools under a common key. No Unity dependencies.",
   "unity": "2021.3",

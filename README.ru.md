@@ -1,4 +1,9 @@
-# Pooling
+<img src="Documentation~/banner.png" width="900" alt="Pooling">
+
+[![release](https://img.shields.io/github/v/release/EgorShesterikov/Unity-Pooling)](../../releases)
+[![release date](https://img.shields.io/github/release-date/EgorShesterikov/Unity-Pooling)](../../releases)
+[![last commit](https://img.shields.io/github/last-commit/EgorShesterikov/Unity-Pooling)](../../commits)
+[![license](https://img.shields.io/github/license/EgorShesterikov/Unity-Pooling)](LICENSE.md)
 
 [English](README.md) | **Русский**
 
@@ -8,9 +13,25 @@
 
 Лёгкий generic-пул объектов для Unity и чистых C#-проектов. Включает `Pool<T>` для одного типа и `MultiPool<TKey, TValue>` для управления несколькими пулами под общим ключом.
 
+## Table Of Contents
+
+<details>
+<summary>Details</summary>
+
+- [Установка](#установка)
+- [Классы](#классы)
+- [Использование](#использование)
+  - [Pool\<T\>](#poolt)
+  - [MultiPool\<TKey, TValue\>](#multipooltkey-tvalue)
+- [Примечания](#примечания)
+
+</details>
+
+---
+
 ## Установка
 
-1. **.unitypackage** — [Releases](https://github.com/EgorShesterikov/Unity-Pooling/releases)
+1. **.unitypackage** — [Releases](../../releases)
 2. **UPM** — `Window → Package Manager` → `+` → `Add package from git URL`:
    `https://github.com/EgorShesterikov/Unity-Pooling.git`
    Добавь `#тег` в конец URL для фиксации версии.
@@ -18,11 +39,15 @@
 
 Unity 2021.3+
 
+---
+
 ## Классы
 
 **`Pool<T>`** — одиночный типизированный пул.
 
 **`MultiPool<TKey, TValue>`** — словарь пулов с произвольным ключом (как правило `System.Type`). Позволяет управлять множеством пулов через одну точку входа.
+
+---
 
 ## Использование
 
@@ -64,14 +89,18 @@ var handler = multiPool.Get(typeof(MyHandler));
 multiPool.Release(typeof(MyHandler), handler);
 ```
 
+---
+
 ## Примечания
 
 - `Pool<T>` отслеживает и свободные, и занятые экземпляры — двойной `Release` игнорируется без ошибок.
 - `MultiPool` выбрасывает `KeyNotFoundException`, если вызвать `Get` до регистрации фабрики для этого ключа.
 - Нет зависимостей от Unity — флаг `noEngineReferences` включён, сборка работает в любом C#-контексте.
 
+---
+
 ## Лицензия
 
-Распространяется под [MIT License](LICENSE.md).
+Распространяется под [MIT License](LICENSE.md). Свободно для использования в личных и коммерческих проектах.
 
 Автор — **Egor Shesterikov**.
